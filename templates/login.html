@@ -1,0 +1,30 @@
+{% extends 'layouts/home.html' %} {% block content %}
+
+<div class="container text-center bg-white p-4 w-25">
+
+    {% from "macros/renderForm.html" import render_field %}
+
+    <form class="form-signin" method="POST" id="frmLogin" name="frmLogin">
+
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+
+        <i class="fas fa-7x fa-crosshairs"></i>
+        <h1 class="h3 mb-3 font-weight-normal">Iniciar sesión</h1>
+        <div class="form-group float-label-form-group controls">
+            {{ render_field(form.username, class='form-control form-control-lg') }}
+            
+        </div>
+        <div class="form-group float-label-form-group controls">
+            {{ render_field(form.password, class='form-control form-control-lg') }}
+            
+        </div>
+        <button class="btn btn-lg btn-success btn-block" type="submit">Entrar</button>
+        <a class="btn btn-lg btn-primary btn-block" href="/">Regresar</a>
+        
+    </form>
+
+
+</div>
+
+
+{% endblock %}

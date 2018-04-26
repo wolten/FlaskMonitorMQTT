@@ -1,0 +1,26 @@
+{% extends 'layouts/home.html' %} {% block content %}
+<div class="container-fluid">
+
+
+     {% if not sign %}
+        <a href="/login" class="text-white">
+            <i class="fas fa-sign-in-alt fa-2x p-2"></i>
+        </a>
+    {% endif %}
+    
+    {% if sign %}
+        <a href="/configuracion" class="text-white">
+            <i class="fa fa-cogs fa-2x p-2"></i>
+        </a>
+        <a href="/logout" class="text-white">
+            <i class="fas fa-sign-out-alt fa-2x p-2"></i>
+        </a>
+    {% endif %}
+
+
+    <div class="row" id="monitorData">
+    </div>
+</div>
+
+
+{% endblock %}

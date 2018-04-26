@@ -1,0 +1,19 @@
+ {% for dato in data %}
+<div class="col-sm-4 col-md-2 col-lg-2">
+    <div class="card bg-light text-white border-0">
+        <h5 class="card-header bg-primary">Sensor: {{ dato.noSensor }}</h5>
+        <div class="card-body">
+            <div class="car-text">
+                <small class="text-muted">Tipo: {{ dato.lectura }}</small>
+                <br>
+                <h3 class="text-center text-info">{{ dato.valor }}</h3>
+            </div>
+        </div>
+        {% if sign %}
+        <div class="card-footer text-muted">
+            <a href="#" class="btnDeleteLectura" rel="{{ dato._id }}" wl-csrf="{{ csrf_token() }}" >  <small> <i class="fa fa-times"></i> Eliminar </small> </a>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endfor %}

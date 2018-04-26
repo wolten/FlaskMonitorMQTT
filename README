@@ -1,0 +1,11 @@
+### De que trata??? ###
+
+* Interface para raspberry MQTT - MONGO - PYTHON - FLASK
+* 1.0
+
+### INSTALAR ###
+* Install.- pip install flask
+* Install.- pip install flask_wtf
+* Install.- pip install pymongo
+* Run.- python app.py
+* Abre tu navegador, escribe: http://localhost:7000
